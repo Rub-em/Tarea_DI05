@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane hgap="20" vgap="15" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tarea_di05.HelloController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints percentWidth="40" />
+        <ColumnConstraints percentWidth="10" />
+        <ColumnConstraints percentWidth="50" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="50" />
+        <RowConstraints minHeight="250" />
+        <RowConstraints minHeight="50" />
+    </rowConstraints>
+    <ListView fx:id="listViewArtistas" prefHeight="250" GridPane.columnIndex="0" GridPane.rowSpan="2" />
+    <Button fx:id="btnInformeArtistas" onAction="#generarInformeArtistas" prefWidth="200" text="Generar Informe de Artista" GridPane.rowIndex="2">
+        <GridPane.margin>
+            <Insets left="15.0" />
+        </GridPane.margin>
+    </Button>
+    <VBox alignment="CENTER" spacing="15" GridPane.columnIndex="2" GridPane.rowSpan="2">
+        <ImageView fitHeight="250.0" fitWidth="250.0">
+            <Image url="https://img.freepik.com/free-vector/open-mind-psychotherapy-composition-with-discussion-symbols-flat-vector-illustration_1284-78150.jpg" />
+        </ImageView>
+        <Button fx:id="btnInformeClientes" onAction="#generarInformeClientes" prefWidth="200" text="Generar Informe de Clientes" />
+    </VBox>
+    <Button fx:id="btnCerrar" onAction="#cerrarAplicacion" text="Cerrar Aplicación" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+</GridPane>
